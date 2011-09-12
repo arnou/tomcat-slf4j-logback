@@ -251,6 +251,12 @@
 	</target>
 
 	<target name="original-tomcat-juli">
+	<!-- tomcat-juli -->
+		<antcall target="downloadfile">
+			<param name="sourcefile" value="${tomcat-juli.location}" />
+			<param name="destfile" value="tomcat-juli.jar" />
+			<param name="destdir" value="${tomcat-juli.home}" />
+		</antcall>
 		<echo message="Testing for tomcat-juli.jar" />
 		<condition property="tomcat-juli-present">
 			<or>
