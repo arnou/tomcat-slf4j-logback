@@ -1,11 +1,11 @@
-
 remote.maven2.location = http://uk1.maven.org/maven2
 externals.path = ${basedir}/_external
 dist.path = ${basedir}/_dist
 
 slf4j.version = 1.6.1
 logback.version = 0.9.29
-tomcat.version = 7.0.16
+tomcat.major.version = 7
+tomcat.version = ${tomcat.major.version}.0.21
 
 slf4j-api.home = ${externals.path}/slf4j-api-${slf4j.version}
 slf4j-api.src.location = ${remote.maven2.location}/org/slf4j/slf4j-api/${slf4j.version}/slf4j-api-${slf4j.version}-sources.jar
@@ -28,3 +28,6 @@ logback-access.src.location = ${remote.maven2.location}/ch/qos/logback/logback-a
 logback-access.src.jar = ${logback-access.home}/logback-access-${logback.version}-sources.jar
 logback-access.location = ${remote.maven2.location}/ch/qos/logback/logback-access/${logback.version}/logback-access-${logback.version}.jar
 logback-access.jar = ${logback-access.home}/logback-access-${logback.version}.jar
+
+tomcat-juli.location=http://archive.apache.org/dist/tomcat/tomcat-${tomcat.major.version}/v${tomcat.version}/bin/extras/tomcat-juli.jar
+tomcat-juli.home=${externals.path}/
